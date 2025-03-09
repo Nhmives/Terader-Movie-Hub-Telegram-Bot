@@ -20,6 +20,12 @@ from telegram.ext import (
     MessageHandler,
     filters
 )
+import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+API_ID = int(os.getenv("API_ID", ""))
+API_HASH = os.getenv("API_HASH")
+DATABASE_CHANNEL_ID = os.getenv("DATABASE_CHANNEL_ID")
+OWNER_ID = int(os.getenv("OWNER_ID", "0"))
 
 api_key = os.environ.get('tmdbApiKey')
 PORT = int(os.environ.get('PORT', '8443'))
